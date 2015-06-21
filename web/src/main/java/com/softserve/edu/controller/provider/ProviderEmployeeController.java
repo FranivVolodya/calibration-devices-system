@@ -1,11 +1,15 @@
 package com.softserve.edu.controller.provider;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.softserve.edu.entity.Organization;
 import com.softserve.edu.entity.user.ProviderEmployee;
 import com.softserve.edu.service.SecurityUserDetailsService;
 import com.softserve.edu.service.UserService;
 import com.softserve.edu.service.admin.OrganizationsService;
 import com.softserve.edu.service.provider.ProviderEmployeeService;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -27,6 +31,15 @@ public class ProviderEmployeeController {
 
     @Autowired
     private ProviderEmployeeService providerEmployeeService;
+    
+    @RequestMapping(value = "role", method = RequestMethod.GET)
+    public Map<String, Object> rolDrsider() {
+    	Map<String, Object> mod = new HashMap <String, Object>();
+    	mod.put("admin","admin");
+    	System.out.println(mod.toString());
+    	System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa");
+        return mod;
+    }
 
     /**
      * Check whereas {@code username} is available,

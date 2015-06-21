@@ -6,14 +6,15 @@ angular
 
         function ($stateProvider, $urlRouterProvider, showErrorsConfigProvider) {
 
-            showErrorsConfigProvider.showSuccess(true);
-
+    	showErrorsConfigProvider.showSuccess(true);
+    	
             $urlRouterProvider.otherwise('/');
 
             $stateProvider
                 .state('main-panel', {
                     url: '/',
-                    templateUrl: '/resources/app/provider/views/main-panel.html'
+                    templateUrl: '/resources/app/provider/views/main-panel.html',
+                    controller: 'MainPanelController'
                 })
                 .state("new-verifications", {
                     url: '/verifications/new',
@@ -57,5 +58,6 @@ define([
     'controllers/AddressModalController',
     'services/VerificationService',
     'services/AddressService',
-    'services/UserService'
+    'services/UserService',
+    'services/RoleService'
 ], function () {});

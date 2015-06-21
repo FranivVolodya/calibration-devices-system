@@ -33,9 +33,11 @@ angular
                     path = '/admin';
                 else if (role == 'CALIBRATOR_EMPLOYEE' || role == 'CALIBRATOR_ADMIN')
                     path = '/calibrator';
-                else if (role == 'PROVIDER_EMPLOYEE' || role == 'PROVIDER_ADMIN')
+                else if (role == 'PROVIDER_ADMIN' || role == 'PROVIDER_EMPLOYEE' )
                     path = '/provider';
-                else if (role == 'STATE_VERIFICATOR_EMPLOYEE' || role == 'STATE_VERIFICATOR_ADMIN')
+//                else if (role == 'PROVIDER_EMPLOYEE')
+//                	path = '/provideremployee';
+              else if (role == 'STATE_VERIFICATOR_EMPLOYEE' || role == 'STATE_VERIFICATOR_ADMIN')
                     path = '/verification';
                 return path;
             }

@@ -1,8 +1,15 @@
 package com.softserve.edu.controller;
 
+
+
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.fasterxml.jackson.databind.util.JSONPObject;
 
 /**
  * Routing between pages
@@ -37,9 +44,22 @@ public class Router {
      */
     @RequestMapping(value = "/provider", method = RequestMethod.GET)
     public String provider() {
-        return "/resources/app/provider/index.html";
+        return "/resources/app/provider/index.jsp";
     }
+    
+    /**
+     * Displays provider Employee page
+     *
+     * @return provider page
+     */
+    @RequestMapping(value = "/provideremployee", method = RequestMethod.GET)
+    public String providerEmploee() {
+        return "/resources/app/provider/index.jsp";
+    }
+    
 
+    
+    
     /**
      * Displays calibrator page
      *
